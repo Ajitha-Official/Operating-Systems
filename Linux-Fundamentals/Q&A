@@ -52,6 +52,15 @@ Solution: find / -type f -name "*.bak" 2>/dev/null | wc -l
 Ans: /usr/bin/xxd
 Solution: which xxd
 
+14. How many files exist on the system that have the ".log" file extension?
+Ans: 32
+Solution: find / -type f -name "*.log" 2>/dev/null | wc -l
+
+15. How many total packages are installed on the target system?
+Ans: 737
+Solution: dpkg -l | wc -l
+
+16. 
 
 
 
