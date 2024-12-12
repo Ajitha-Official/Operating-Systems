@@ -23,3 +23,13 @@ Ans: ens192
 Solution: ip link show (or) ifconfig
 Look for MTU 1500, where MTU Stands for Maximum Transmission Unit. To filter interface use: ip link show | grep 'mtu 1500'
 
+7.  What is the name of the hidden "history" file in the htb-user's home directory?
+Ans: .bash_history
+Solution: 1. cd /home/htb-user 2. ls -a 3. cat .bash_history
+
+8. What is the index number of the "sudoers" file in the "/etc" directory?
+Ans: 147627
+Solution: ls -i /etc/sudoers
+
+
+
