@@ -60,7 +60,27 @@ Solution: find / -type f -name "*.log" 2>/dev/null | wc -l
 Ans: 737
 Solution: dpkg -l | wc -l
 
-16. 
+16. How many services are listening on the target system on all interfaces? (Not on localhost and IPv4 only)
+Ans: 7
+Solution: ss -tuln | grep -E "0.0.0.0" | wc -l
+where, t - Displays TCP sockets, u-Displays UDP sockets, l- Shows only listening sockets, n - Prevents resolving IP addresses to names for faster output.
+
+17. Determine what user the ProFTPd server is running under. Submit the username as the answer.
+Ans: proftpd
+Solution: ps aux | grep proftpd
+ps -u proftpd
+
+18.  Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths of that domain. Submit the number of these paths as the answer.
+Ans: 34
+Solution: Fetch source code:  curl -s https://www.inlanefreight.com > website_source.html
+Extract all links:            grep -o 'https://www.inlanefreight.com[^"]*' website_source.html > paths.txt
+Filter the unique paths:      cut -d '/' -f 4- paths.txt | sort -u | wc -l
+
+19. 
+
+
+
+
 
 
 
