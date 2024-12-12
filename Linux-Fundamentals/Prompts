@@ -32,8 +32,8 @@
 | awk     | awk '{action}' [file]     | awk '{print $1, $NF}'| Pattern scanning and text processing. displays the first ($1) and last ($NF) result of the line                        |
 | sed     |sed 's/[old]/[new]/' [file]| sed 's/bin/HTB/g'    | Stream editor for filtering and transforming text (from bin to htb). s- substitude command, g flag replaces all matches|                                             
 | wc      | wc [options] [file]       | wc -l                | Count lines, words, or characters in a file.                                                                           |
-| tr      | tr [set1] [set2]          | tr ":" " "           | Translate or delete characters from input. (i.e. replace)                                                              |
-
+| chmod   |chmod [options] mode [file]| chmod a+r shell      | Change file or directory permissions. chmod 754-> Octal representation of Adding executable permissions to a file.     |
+| chown   |chown [options] owner[:g] f| chown <u>:<g> <f/dir>| Here, g- group, u - user, f - file. Change ownership of a file or directory or a specific user only.                   |
 
 
 
