@@ -1,0 +1,4 @@
+| Command | Syntax | Example | Description |
+|----------|----------|----------|----------|
+| Man  |man <tool>   | man curl | Provides detailed manuals with detailed explanations |
+| Row 2    | Data 3   | Data 4   |
