@@ -1,25 +1,41 @@
-| Command | Syntax                    | Example           | Description                                                                                                            |
-|-------- |---------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------|
-| man     | man <tool>                | man curl          | Provides detailed manuals with detailed explanations                                                                   |
-| help    | <tool> --help             | curl --help       | Help Command                                                                                                           |
-| h       | <tool> -h                 | curl -h           | Short Version of help                                                                                                  |
-| apropos | apropos <keyword>         | apropos sudo      | This tool searches the descriptions for instances of a given keyword. (Another useful tool: https://explainshell.com/) |
-| hostname|     --                    | --                | self-explanatory command and will just print the name of the computer that we are logged into                          |
-| whoami  |     --                    | --                | to get our current username                                                                                            |
-| id      |     --                    | --                | expansion of whoami; adm -> users can read log files in /var/log; Sudo-> powerful root user                            |
-| uname   |     --                    | uname -a          | Prints basic information about the operating system name and system hardware.                                          |
-| pwd     |     --                    | --                | Print Working Directory                                                                                                |
-| ls      |     --                    | ls -l /var/       | lists all contents inside a directory. -l ->to display more; -la ->to list all including hidden files begins with .    |
-| cd      | cd <path>                 | cd -              | change directory. - is to jump back; cd .. ->jumps to the parent directory                                             |
-| touch   | touch <name>              |touch info.txt     | creates an empty file                                                                                                  |
-| mkdir   | mkdir <name>              |mkdir Storage      | creates a directory                                                                                                    |
-| tree    | tree <path>               | tree .            | to view whole structure, single dot (.) represents start of current directory                                          |
-| mv      | mv <file> <rename>        | mv in.txt info.txt| move and also rename files and directories                                                                             |
-| nano    | nano <filename>           | nano notes.txt    | to create and edit (when pager opens) a file                                                                           |
-| cat     | cat <filename>            | cat notes.txt     | To view the contents of the file                                                                                       |
-| which   | which <OS Program>        | which python      | returns the path to the file or link that should be executed (Example: cURL, netcat, wget, python, gcc)                |
-| find    | find <location> <options> | <see below table> | to find files and folders, additionally it has function to filter the results.                                         |
-| locate  | locate <file>             | locate *.conf     | search through the whole system for our files and directories, its a quick way to search as it searches with local db's|
+| Command | Syntax                    | Example              | Description                                                                                                            |
+|-------- |---------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------|
+| man     | man <tool>                | man curl             | Provides detailed manuals with detailed explanations                                                                   |
+| help    | <tool> --help             | curl --help          | Help Command                                                                                                           |
+| h       | <tool> -h                 | curl -h              | Short Version of help                                                                                                  |
+| apropos | apropos <keyword>         | apropos sudo         | This tool searches the descriptions for instances of a given keyword. (Another useful tool: https://explainshell.com/) |
+| hostname|     --                    | --                   | self-explanatory command and will just print the name of the computer that we are logged into                          |
+| whoami  |     --                    | --                   | to get our current username                                                                                            |
+| id      |     --                    | --                   | expansion of whoami; adm -> users can read log files in /var/log; Sudo-> powerful root user                            |
+| uname   |     --                    | uname -a             | Prints basic information about the operating system name and system hardware.                                          |
+| pwd     |     --                    | --                   | Print Working Directory                                                                                                |
+| ls      |     --                    | ls -l /var/          | lists all contents inside a directory. -l ->to display more; -la ->to list all including hidden files begins with .    |
+| cd      | cd <path>                 | cd -                 | change directory. - is to jump back; cd .. ->jumps to the parent directory                                             |
+| touch   | touch <name>              |touch info.txt        | creates an empty file                                                                                                  |
+| mkdir   | mkdir <name>              |mkdir Storage         | creates a directory                                                                                                    |
+| tree    | tree <path>               | tree .               | to view whole structure, single dot (.) represents start of current directory                                          |
+| mv      | mv <file> <rename>        | mv in.txt info.txt   | move and also rename files and directories                                                                             |
+| nano    | nano <filename>           | nano notes.txt       | to create and edit (when pager opens) a file                                                                           |
+| cat     | cat <filename>            | cat notes.txt        | To view the contents of the file                                                                                       |
+| which   | which <OS Program>        | which python         | returns the path to the file or link that should be executed (Example: cURL, netcat, wget, python, gcc)                |
+| find    | find <location> <options> | <see below table>    | to find files and folders, additionally it has function to filter the results.                                         |
+| locate  | locate <file>             | locate *.conf        | search through the whole system for our files and directories, its a quick way to search as it searches with local db's|
+| more    | more <file>               | more /etc/passwd     | View file content one screen at a time.                                                                                |
+| less    | less <file>               | less /etc/passwd     | View file content with backward and forward navigation. the output does not remain in the terminal unlike more         |
+| head    | head <file>               | head /etc/passwd     | By default, head prints the first ten lines of the given file or input                                                 |
+| tail    | tail <file>               | tail /etc/passwd     | By default, head prints the last ten lines of the given file or input                                                  |
+| sort    | sort <file>               | cat /etc/ | sort     | Sort file lines alphabetically or numerically.                                                                         |
+| grep    | grep [pattern] [file]     | grep "false\|log"    | Search for specific patterns in a file.                                                                                |
+| cut     | cut -d[delimter] -f[field]| cut -d":" -f1        | Extract sections of a file by delimiter and fields.                                                                    |
+| tr      | tr [set1] [set2]          | tr ":" " "           | Translate or delete characters from input. (i.e. replace)                                                              |
+| column  | column -t [file]          | column -t            | Format text into a table-like structure.                                                                               |
+| awk     | awk '{action}' [file]     | awk '{print $1, $NF}'| Pattern scanning and text processing. displays the first ($1) and last ($NF) result of the line                        |
+| sed     |sed 's/[old]/[new]/' [file]| sed 's/bin/HTB/g'    | Stream editor for filtering and transforming text (from bin to htb). s- substitude command, g flag replaces all matches|                                             
+| wc      | wc [options] [file]       | wc -l                | Count lines, words, or characters in a file.                                                                           |
+| tr      | tr [set1] [set2]          | tr ":" " "           | Translate or delete characters from input. (i.e. replace)                                                              |
+
+
+
 
 
 FIND: 
