@@ -8,4 +8,7 @@
 | whoami  |     --            | --           | to get our current username                                                                                            |
 | id      |     --            | --           | expansion of whoami; adm -> users can read log files in /var/log; Sudo-> powerful root user                            |
 | uname   |     --            | uname -a     | Prints basic information about the operating system name and system hardware.                                          |
-| hostname|     --            | --           |  self-explanatory command and will just print the name of the computer that we are logged into                         |
+| pwd     |     --            | --           | Print Working Directory                                                                                                |
+| ls      |     --            | ls -l /var/  | lists all contents inside a directory. -l ->to display more; -la ->to list all including hidden files begins with .    |
+| cd      | cd <path>         | cd -         | change directory. - is to jump back; cd .. ->jumps to the parent directory                                             |
+| pwd     |     --            | --           | Print Working Directory |
