@@ -88,7 +88,14 @@ Solution: --lock is the long version of the option required to lock a user accou
 Ans: --command
 Solution: --command is the long version of the option required to execute a command as a different user using the su command.
 
-22. 
+22.  Use the "systemctl" command to list all units of services and submit the unit name with the description "Load AppArmor profiles managed internally by snapd" as the answer.
+Ans: snapd.apparmor.service
+Solution: systemctl list-units --type=service --all | grep "Load AppArmor profiles managed internally by snapd"
+
+23. What is the Type of the service of the "dconf.service"?
+Ans: dbus
+Solution: systemctl show dconf.service | grep Type
+
 
 
 
