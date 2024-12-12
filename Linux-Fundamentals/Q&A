@@ -39,5 +39,19 @@ Solution: ls -lt /var/backups (The first file listed, apt.extended_states.0, is 
 Ans: 265293
 Solution: ls -i /var/backups/shadow.bak (Output: 265293 /var/backups/shadow.bak) 265293 - inode number
 
-11. 
+11. What is the name of the config file that has been created after 2020-03-03 and is smaller than 28k but larger than 25k?
+Ans: 00-mesa-defaults.conf
+Solution: cd /etc
+find . -type f -newermt 2020-03-03 -size +25k -size -28k
+
+12. How many files exist on the system that have the ".bak" extension?
+Ans: 4
+Solution: find / -type f -name "*.bak" 2>/dev/null | wc -l
+
+13. Submit the full path of the "xxd" binary.
+Ans: /usr/bin/xxd
+Solution: which xxd
+
+
+
 
