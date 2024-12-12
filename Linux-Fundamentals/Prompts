@@ -1,41 +1,45 @@
-| Command | Syntax                    | Example              | Description                                                                                                            |
-|-------- |---------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------|
-| man     | man <tool>                | man curl             | Provides detailed manuals with detailed explanations                                                                   |
-| help    | <tool> --help             | curl --help          | Help Command                                                                                                           |
-| h       | <tool> -h                 | curl -h              | Short Version of help                                                                                                  |
-| apropos | apropos <keyword>         | apropos sudo         | This tool searches the descriptions for instances of a given keyword. (Another useful tool: https://explainshell.com/) |
-| hostname|     --                    | --                   | self-explanatory command and will just print the name of the computer that we are logged into                          |
-| whoami  |     --                    | --                   | to get our current username                                                                                            |
-| id      |     --                    | --                   | expansion of whoami; adm -> users can read log files in /var/log; Sudo-> powerful root user                            |
-| uname   |     --                    | uname -a             | Prints basic information about the operating system name and system hardware.                                          |
-| pwd     |     --                    | --                   | Print Working Directory                                                                                                |
-| ls      |     --                    | ls -l /var/          | lists all contents inside a directory. -l ->to display more; -la ->to list all including hidden files begins with .    |
-| cd      | cd <path>                 | cd -                 | change directory. - is to jump back; cd .. ->jumps to the parent directory                                             |
-| touch   | touch <name>              |touch info.txt        | creates an empty file                                                                                                  |
-| mkdir   | mkdir <name>              |mkdir Storage         | creates a directory                                                                                                    |
-| tree    | tree <path>               | tree .               | to view whole structure, single dot (.) represents start of current directory                                          |
-| mv      | mv <file> <rename>        | mv in.txt info.txt   | move and also rename files and directories                                                                             |
-| nano    | nano <filename>           | nano notes.txt       | to create and edit (when pager opens) a file                                                                           |
-| cat     | cat <filename>            | cat notes.txt        | To view the contents of the file                                                                                       |
-| which   | which <OS Program>        | which python         | returns the path to the file or link that should be executed (Example: cURL, netcat, wget, python, gcc)                |
-| find    | find <location> <options> | <see below table>    | to find files and folders, additionally it has function to filter the results.                                         |
-| locate  | locate <file>             | locate *.conf        | search through the whole system for our files and directories, its a quick way to search as it searches with local db's|
-| more    | more <file>               | more /etc/passwd     | View file content one screen at a time.                                                                                |
-| less    | less <file>               | less /etc/passwd     | View file content with backward and forward navigation. the output does not remain in the terminal unlike more         |
-| head    | head <file>               | head /etc/passwd     | By default, head prints the first ten lines of the given file or input                                                 |
-| tail    | tail <file>               | tail /etc/passwd     | By default, head prints the last ten lines of the given file or input                                                  |
-| sort    | sort <file>               | cat /etc/ | sort     | Sort file lines alphabetically or numerically.                                                                         |
-| grep    | grep [pattern] [file]     | grep "false\|log"    | Search for specific patterns in a file.                                                                                |
-| cut     | cut -d[delimter] -f[field]| cut -d":" -f1        | Extract sections of a file by delimiter and fields.                                                                    |
-| tr      | tr [set1] [set2]          | tr ":" " "           | Translate or delete characters from input. (i.e. replace)                                                              |
-| column  | column -t [file]          | column -t            | Format text into a table-like structure.                                                                               |
-| awk     | awk '{action}' [file]     | awk '{print $1, $NF}'| Pattern scanning and text processing. displays the first ($1) and last ($NF) result of the line                        |
-| sed     |sed 's/[old]/[new]/' [file]| sed 's/bin/HTB/g'    | Stream editor for filtering and transforming text (from bin to htb). s- substitude command, g flag replaces all matches|                                             
-| wc      | wc [options] [file]       | wc -l                | Count lines, words, or characters in a file.                                                                           |
-| chmod   |chmod [options] mode [file]| chmod a+r shell      | Change file or directory permissions. chmod 754-> Octal representation of Adding executable permissions to a file.     |
-| chown   |chown [options] owner[:g] f| chown <u>:<g> <f/dir>| Here, g- group, u - user, f - file. Change ownership of a file or directory or a specific user only.                   |
-
-
+| Command  | Syntax                    | Example                             | Description                                                                                                            |
+|----------|---------------------------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| man      | man <tool>                | man curl                            | Provides detailed manuals with detailed explanations                                                                   |
+| help     | <tool> --help             | curl --help                         | Help Command                                                                                                           |
+| h        | <tool> -h                 | curl -h                             | Short Version of help                                                                                                  |
+| apropos  | apropos <keyword>         | apropos sudo                        | This tool searches the descriptions for instances of a given keyword. (Another useful tool: https://explainshell.com/) |
+| hostname |     --                    | --                                  | self-explanatory command and will just print the name of the computer that we are logged into                          |
+| whoami   |     --                    | --                                  | to get our current username                                                                                            |
+| id       |     --                    | --                                  | expansion of whoami; adm -> users can read log files in /var/log; Sudo-> powerful root user                            |
+| uname    |     --                    | uname -a                            | Prints basic information about the operating system name and system hardware.                                          |
+| pwd      |     --                    | --                                  | Print Working Directory                                                                                                |
+| ls       |     --                    | ls -l /var/                         | lists all contents inside a directory. -l ->to display more; -la ->to list all including hidden files begins with .    |
+| cd       | cd <path>                 | cd -                                | change directory. - is to jump back; cd .. ->jumps to the parent directory                                             |
+| touch    | touch <name>              |touch info.txt                       | creates an empty file                                                                                                  |
+| mkdir    | mkdir <name>              |mkdir Storage                        | creates a directory                                                                                                    |
+| tree     | tree <path>               | tree .                              | to view whole structure, single dot (.) represents start of current directory                                          |
+| mv       | mv <file> <rename>        | mv in.txt info.txt                  | move and also rename files and directories                                                                             |
+| nano     | nano <filename>           | nano notes.txt                      | to create and edit (when pager opens) a file                                                                           |
+| cat      | cat <filename>            | cat notes.txt                       | To view the contents of the file                                                                                       |
+| which    | which <OS Program>        | which python                        | returns the path to the file or link that should be executed (Example: cURL, netcat, wget, python, gcc)                |
+| find     | find <location> <options> | <see below table>                   | to find files and folders, additionally it has function to filter the results.                                         |
+| locate   | locate <file>             | locate *.conf                       | search through the whole system for our files and directories, its a quick way to search as it searches with local db's|
+| more     | more <file>               | more /etc/passwd                    | View file content one screen at a time.                                                                                |
+| less     | less <file>               | less /etc/passwd                    | View file content with backward and forward navigation. the output does not remain in the terminal unlike more         |
+| head     | head <file>               | head /etc/passwd                    | By default, head prints the first ten lines of the given file or input                                                 |
+| tail     | tail <file>               | tail /etc/passwd                    | By default, head prints the last ten lines of the given file or input                                                  |
+| sort     | sort <file>               | cat /etc/ | sort                    | Sort file lines alphabetically or numerically.                                                                         |
+| grep     | grep [pattern] [file]     | grep "false\|log"                   | Search for specific patterns in a file.                                                                                |
+| cut      | cut -d[delimter] -f[field]| cut -d":" -f1                       | Extract sections of a file by delimiter and fields.                                                                    |
+| tr       | tr [set1] [set2]          | tr ":" " "                          | Translate or delete characters from input. (i.e. replace)                                                              |
+| column   | column -t [file]          | column -t                           | Format text into a table-like structure.                                                                               |
+| awk      | awk '{action}' [file]     | awk '{print $1, $NF}'               | Pattern scanning and text processing. displays the first ($1) and last ($NF) result of the line                        |
+| sed      |sed 's/[old]/[new]/' [file]| sed 's/bin/HTB/g'                   | Stream editor for filtering and transforming text (from bin to htb). s- substitude command, g flag replaces all matches|                                             
+| wc       | wc [options] [file]       | wc -l                               | Count lines, words, or characters in a file.                                                                           |
+| chmod    |chmod [options] mode [file]| chmod a+r shell                     | Change file or directory permissions. chmod 754-> Octal representation of Adding executable permissions to a file.     |
+| chown    |chown [options] owner[:g] f| chown <u>:<g> <f/dir>               | Here, g- group, u - user, f - file. Change ownership of a file or directory or a specific user only.                   |
+|systemstl | systemctl start <service> | systemctl start ssh                 | Starts a service; <systemctl status ssh> - to check the status; <systemctl list-units --type=service> Lists all service|                                              |
+|journalctl|journalctl -u <service>    |journalctl -u ssh.service --no-pager | View logs for a service 
+| kill -l  | kill -l                   | kill -l                             | Lists all available signals that can be sent to a process. 
+| kill     | kill <signal> <PID>       | kill 9 846                          | Sends a signal to terminate a process using its Process ID (PID)
+| jobs     | jobs                      | jobs                                | Lists all currently running background processes. Use bg - put the process in background and fg 1 (Foreground a process)|
+| ps       | ps -aux | grep <process>  | ps -aux | grep ssh                  | Lists processes and filters by the specified process name.            
 
 
 FIND: 
@@ -49,3 +53,16 @@ Example: find / -type f -name *.conf -user root -size +20k -newermt 2020-03-03 -
 | -newermt 2020-03-03	  | With this option, we set the date. Only files newer than the specified date will be presented.                                                                                                                                                                                 |  
 | -exec ls -al {} \;  	| This option executes the specified command, using the curly brackets as placeholders for each result. The backslash escapes the next character from being interpreted by the shell because otherwise, the semicolon would terminate the command and not reach the redirection. |
 | 2>/dev/null           |	This is a STDERR redirection to the 'null device', which we will come back to in the next section. This redirection ensures that no errors are displayed in the terminal. This redirection must not be an option of the 'find' command.                                        |
+
+
+Package Management Programs:
+| Command  | Syntax                            | Example                               | Description                                                                                                                                  |
+|----------|-----------------------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dpkg     | dpkg [options] [package]          | dpkg -i package.deb                   |The dpkg is a tool to install, build, remove, and manage Debian packages. The primary and more user-friendly front-end for dpkg is aptitude. |
+| apt      | apt [options] [command] [package] | apt install vim                       | Apt provides a high-level command-line interface for the package management system.                                                          |
+| aptitude | aptitude [options] [command]      | aptitude search vim                   | Aptitude is an alternative to apt and is a high-level interface to the package manager.                                                      |
+| snap     | snap [command] [options]          | snap install spotify                  | Install, configure, refresh, and remove snap packages. Snaps enable the secure distribution of the latest apps and utilities for the cloud, servers, desktops, and the internet of things. |
+| gem      | gem [command] [options]           | gem install rails                     | Gem is the front-end to RubyGems, the standard package manager for Ruby.                                                                     |
+| pip      | pip [command] [options]           | pip install requests                  | Pip is a Python package installer recommended for installing Python packages that are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation. |
+| git      | git [command] [options]           | git clone https://github.com/repo.git | Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. |
+
