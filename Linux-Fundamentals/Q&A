@@ -76,7 +76,19 @@ Solution: Fetch source code:  curl -s https://www.inlanefreight.com > website_so
 Extract all links:            grep -o 'https://www.inlanefreight.com[^"]*' website_source.html > paths.txt
 Filter the unique paths:      cut -d '/' -f 4- paths.txt | sort -u | wc -l
 
-19. 
+19. Which option needs to be set to create a home directory for a new user using "useradd" command?
+Ans: -m
+Solution: sudo useradd -m htb-user (-m is the option required to create a home directory for a new user using the useradd command.)
+
+20.  Which option needs to be set to lock a user account using the "usermod" command? (long version of the option)
+Ans: --lock
+Solution: --lock is the long version of the option required to lock a user account using the usermod command.
+
+21. Which option needs to be set to execute a command as a different user using the "su" command? (long version of the option)
+Ans: --command
+Solution: --command is the long version of the option required to execute a command as a different user using the su command.
+
+22. 
 
 
 
