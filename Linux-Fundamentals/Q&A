@@ -31,5 +31,13 @@ Solution: 1. cd /home/htb-user 2. ls -a 3. cat .bash_history
 Ans: 147627
 Solution: ls -i /etc/sudoers
 
+9. What is the name of the last modified file in the "/var/backups" directory?
+Ans: apt.extended_states.0
+Solution: ls -lt /var/backups (The first file listed, apt.extended_states.0, is the most recently modified file.)
 
+10. What is the inode number of the "shadow.bak" file in the "/var/backups" directory?
+Ans: 265293
+Solution: ls -i /var/backups/shadow.bak (Output: 265293 /var/backups/shadow.bak) 265293 - inode number
+
+11. 
 
