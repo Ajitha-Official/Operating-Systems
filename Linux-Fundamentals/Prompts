@@ -15,6 +15,7 @@
 | mkdir   | mkdir <name>      |mkdir Storage      | creates a directory                                                                                                    |
 | tree    | tree <path>       | tree .            | to view whole structure, single dot (.) represents start of current directory                                          |
 | mv      | mv <file> <rename>| mv in.txt info.txt| move and also rename files and directories                                                                             |
-| cp      | cp <f1> <f2>      | cp info.txt local/| copies files or directories to a specified path                                                                        |
-
-
+| nano    | nano <filename>   | nano notes.txt    | to create and edit (when pager opens) a file                                                                       |
+| cat     | cat <filename>    | cat notes.txt     | To view the contents of the file
+| cp      | cp <f1> <f2>      | cp info.txt local/| copies files or directories to a specified path  
+| cp      | cp <f1> <f2>      | cp info.txt local/| copies files or directories to a specified path  
