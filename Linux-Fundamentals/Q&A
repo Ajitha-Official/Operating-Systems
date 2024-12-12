@@ -1,0 +1,25 @@
+1. Find out the machine hardware name and submit it as the answer.
+Ans: x86_64
+Solution: uname -m (provides system information)
+
+2. What is the path to htb-student's home directory?
+Ans: /home/htb-student
+Solution: ls /home (or) echo $HOME
+
+3.  What is the path to the htb-student's mail?
+Ans: /var/mail/htb-student
+Solution: ls /var/mail (or) find /var/mail -name "htb-student"
+
+4. Which shell is specified for the htb-student user?
+Ans: /bin/bash
+Solution: echo $SHELL (or) grep htb-student /etc/passwd
+
+5. Which kernel version is installed on the system? (Format: 1.22.3)
+Ans: 4.15.0
+Solution: uname -r
+
+6.  What is the name of the network interface that MTU is set to 1500?
+Ans: ens192
+Solution: ip link show (or) ifconfig
+Look for MTU 1500, where MTU Stands for Maximum Transmission Unit. To filter interface use: ip link show | grep 'mtu 1500'
+
