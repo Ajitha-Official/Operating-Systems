@@ -7,3 +7,8 @@ Powershell
 2. Which Windows NT version is installed on the workstation? (i.e. Windows X - case sensitive)
 Ans: Windows 10
 Solution: (Get-ComputerInfo).OsName (or) Get-ComputerInfo | Select-Object -Property OsName
+
+3. Find the non-standard directory in the C drive. Submit the contents of the flag file saved in this directory.
+Ans: c8fe8d977d3a0c655ed7cf81e4d13c75
+Solution: Locate to C drive -> Academy -> Open Flag file -> copy & paste it
+
