@@ -1,12 +1,9 @@
-# Operating-Systems
-Linux Fundamentals
+Welcome to my Operating Systems Repository!
+This repository serves as a collection of my learning journey, notes, and practical exercises focused on operating systems. 
+Learning Platform: **Hack The Box (HTB)** and other resources.
+The goal is to document my understanding of various operating system concepts, commands, and tools.
 
-##Highlights
-- Linux structure/ Introduction
-- Using the shell
-- Navigating the Linux operating system
-- Working with files and directories
-- Linux administration
-- Service management
-- Permissions management
-- Linux Networking
+Repository Structure:
+---------------------
+Linux Fundamentals: Readme, Notes, Q&A
+Windows Fundamentals: Readme, Notes, Q&A
