@@ -1,0 +1,9 @@
+1. What is the Build Number of the target workstation?
+Ans: 19041
+Solution: xfreerdp /v:10.129.201.57 /u:htb-student /p:Academy_WinFun32!
+<in Windows- cmd> Get-WmiObject -Class win32_OperatingSystem | select Version,BuildNumber
+Powershell
+
+2. Which Windows NT version is installed on the workstation? (i.e. Windows X - case sensitive)
+Ans: Windows 10
+Solution: (Get-ComputerInfo).OsName (or) Get-ComputerInfo | Select-Object -Property OsName
